@@ -1,6 +1,6 @@
 # SWEA 1289. 원재의 메모리 복구하기
 # https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV19AcoKI9sCFAZN
-# 소요시간: 60분 / 시도: 4회
+# 소요시간: 30분 / 시도: 4회
 
 import sys
 sys.stdin = open("input.txt", "r")
