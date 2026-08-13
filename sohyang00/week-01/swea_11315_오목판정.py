@@ -43,20 +43,14 @@ sys.stdin = open("sample_input.txt", "r")
 
 def counting(row, col):
     for dr, dc in directions:
-        count = 1
-        nr = row + dr
-        nc = col + dc
-        while 0 <= nr < n and 0 <= nc < n:
-            if arr[nr][nc] == '.':
-                break
+        found = True
 
-            count += 1
-            if count >= 5: 
-                return 'YES'
-
-            nr += dr
-            nc += dc
-             
+        for i in range(5):
+            nr = row + dr*i
+            nc = col + dc*i
+            if not(0 <= nr < n and 0 <= nc < n and arr[nr][nc] =='o'):
+                found = False
+        if found: return 'YES'
     return 'NO'
 
 
@@ -66,7 +60,7 @@ for test_case in range(1, T + 1):
     n = int(input())
     arr = [list(input()) for _ in range(n)]
 
-    directions = [(-1,0), (1,0), (0,-1), (0,1), (-1,-1), (1,1), (-1,1),(1,-1)]
+    directions = [(-1,0), (0,-1), (1,1), (-1,1)]
     result = 'NO'
 
     for row in range(n):
