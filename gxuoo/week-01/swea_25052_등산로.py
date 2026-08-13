@@ -18,15 +18,11 @@ def find_next(row, col):
 
     return next_row, next_col
 
-def check(row, col, length):
-    global max_len
-    if length > max_len:
-        max_len = length
-
+def walk_length(row, col):
     next_row, next_col = find_next(row, col)
     if next_row == -1:
-        return
-    check(next_row, next_col, length + 1)
+        return 1
+    return walk_length(next_row, next_col) + 1
 
 T = int(input())
 
@@ -37,10 +33,8 @@ for test_case in range(1, T + 1):
 
     for row in range(n):
         for col in range(n):
-            max_len = 0
-            check(row, col, 1)
-
-            if max_len > result:
-                result = max_len
+            length = walk_length(row, col)
+            if length > result:
+                result = length
 
     print(f'#{test_case} {result}')
