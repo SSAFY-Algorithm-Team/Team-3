@@ -1,3 +1,7 @@
+# SWEA 10760. 우주선착륙2
+# https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AXSHJueab1oDFAQT
+# 소요시간: 15분 / 시도: 1회
+
 def isPossible(arr, row, col, dir_vector):
     count = 0
     for dr in dir_vector[0]:
