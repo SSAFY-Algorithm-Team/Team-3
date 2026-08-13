@@ -50,6 +50,7 @@ def counting(row, col):
             nc = col + dc*i
             if not(0 <= nr < n and 0 <= nc < n and arr[nr][nc] =='o'):
                 found = False
+                break
         if found: return 'YES'
     return 'NO'
 
