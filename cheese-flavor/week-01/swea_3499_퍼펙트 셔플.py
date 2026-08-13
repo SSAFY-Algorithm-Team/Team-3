@@ -5,29 +5,25 @@
 T = int(input())
 for test_case in range(1, T + 1):
     n = int(input())
-    arr = []
-    for _ in range(n):
-        arr.append(input())
+    arr = list(input().split())
+    arr_n = 0
     
-    sector = n//2 #구조를 분리할 값
+    if n % 2 == 0:
+        arr_n = n//2
+    else:
+        arr_n = n//2 + 1
     
-    middle, up, down = 0, 0, 0    #중
-    for i in range(n):
-        middle += int(arr[sector][i])    
+    arr1 = arr[:arr_n]
+    arr2 = arr[arr_n:]
+    new_arr = ''
+    
+    for i in range(arr_n):
+        new_arr += (arr1[i])
+        if n % 2 == 0 or i != arr_n-1:
+            new_arr += ' '
         
-    if n != 1:
-        up = int(arr[0][sector])   #상
-        for i in range(1, sector):
-            up += int(arr[i][sector])
-
-            for j in range(1, i+1):
-                up += int(arr[i][sector-j]) + int(arr[i][sector+j])
-
-        down = int(arr[n-1][sector])  #하
-        for i in range(n-2, sector, -1):
-            down += int(arr[i][sector])
+        if i < len(arr2):
+            new_arr += (arr2[i]) + ' '
             
-            for j in range(1, n-i):
-                down += int(arr[i][sector-j]) + int(arr[i][sector+j])
+    print(f"#{test_case} {new_arr}")
         
-    print(f"#{test_case} {up+down+middle}")
