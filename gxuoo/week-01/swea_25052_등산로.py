@@ -2,10 +2,6 @@
 # https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AZiyl6OKpUjHBIP9
 # 소요시간: 1시간 / 시도: 3회
 
-# SWEA 25052. 등산로
-# https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AZiyl6OKpUjHBIP9
-# 소요시간: 1시간 / 시도: 3회
-
 dir_row = (-1, 1, 0, 0)
 dir_col = (0, 0, -1, 1)
 
