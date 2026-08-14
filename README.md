@@ -119,14 +119,52 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
+## 2주차 문제 (5문제)
+
+**출처:** SWEA 역량테스트 리스트업 → A형 대비 추천 세트 / 프로그래머스 코딩테스트 고득점 Kit → 완전탐색
+
+1주차는 D2~D3 구현 위주였다면, 2주차부터는 **완전탐색**으로 넘어갑니다.
+"모든 경우를 어떻게 빠짐없이 만들 것인가" + "그걸 어떻게 줄일 것인가" 두 가지를 봅니다.
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 번호     | 제목          | 난이도 | 링크                                                                                             |
+| -------- | ------------- | ------ | ------------------------------------------------------------------------------------------------ |
+| **5656** | **벽돌 깨기** | D3     | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo) |
+
+> **왜 이 문제인가**
+> 완전탐색(구슬 쏠 위치 조합)과 시뮬레이션(연쇄 폭발 + 중력)이 한 문제에 같이 들어있어서,
+> 사람마다 코드가 크게 갈립니다. 조합 생성(`itertools.product` vs DFS 백트래킹),
+> 폭발 처리(BFS vs 재귀), 보드 복사(`deepcopy` vs 수동 복사 vs 되돌리기) —
+> 특히 보드 복사는 **가장 짧게 짠 코드가 시간초과가 나는** 지점이라 비교할 거리가 많습니다.
+
+### SWEA (2문제)
+
+| 번호 | 제목                 | 난이도 | 링크                                                                                             |
+| ---- | -------------------- | ------ | ------------------------------------------------------------------------------------------------ |
+| 1767 | 프로세서 연결하기    | D4     | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4suNtaXFEDFAUf) |
+| 5656 | 벽돌 깨기 ⭐         | D3     | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo) |
+
+### 프로그래머스 (3문제)
+
+| 제목            | 난이도 | 링크                                                                    |
+| --------------- | ------ | ----------------------------------------------------------------------- |
+| 최소 직사각형   | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/86491) |
+| 소수 찾기       | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) |
+| 피로도          | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/87946) |
+
+---
+
 ## 제출 방법 요약
 
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-01
+git switch -c {깃허브 닉네임}/week-02
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-01
+git push -u origin {깃허브 닉네임}/week-02
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
