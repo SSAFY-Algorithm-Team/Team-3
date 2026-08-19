@@ -1,3 +1,7 @@
+# SWEA D3. 벽돌깨기
+# https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo
+# 소요시간: 120분 / 시도: 3회
+
 from collections import deque
 
 T = int(input())
