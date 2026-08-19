@@ -1,76 +1,86 @@
 # SWEA D3. 5656 벽돌 깨기
 # https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo
-# 소요시간: 60분 / 시도: 3회
+# 소요시간: 180분 / 시도: 3회
 # 15:05
 
-#각 열마다 가장 위에 있는 벽돌의 위치랑 정보를 저장해두는 게 필요할까 ?? ...
-#ㄴㄴ 걍 완탐 돌리는 게 낫겟다 
-#재귀? 
-# 근데 터트리고 나서 맵 어케 함? 
-
-# 깨야할 벽돌 찾는 로직
-# 벽돌 찾았으면 주위 벽돌 깨고 깨졋음 한칸 씩 내리는 로직
-# 0으로 다 바꾸고.. 열 탐색해서 행+1이 0이면 둘이 바꿔주기
-
-
 import sys
-sys.stdin = open("input.txt", "r")
+sys.stdin = open("sample_input.txt", "r")
 
 def break_bricks(row, col, board):
     radius = board[row][col]
 
     board[row][col] = 0
-    directions = [(0,-1),(0,1),(0,1)]
+    directions = [(0,-1),(0,1),(1,0),(-1,0)]
 
     for dr, dc in directions:
-        for i in range(radius):
+        for i in range(1,radius):
             nr = row + dr*i
             nc = col + dc*i
-            if 0<= nr < W and 0 <= nc < H:
-                board[nr][nc] = 0
-
-    return board
+            if not(0<= nr < H and 0 <= nc < W):
+                break
+            if board[nr][nc] == 0:
+                continue
+            break_bricks(nr,nc,board)
 
 def drop_bricks(board):
-    for col in range(H):
-        for row in range(W):
-            if board[row][col] >= 1 and board[row+1][col] == 0:
-                board[row+1][col] = board[row][col]
-                board[row][col] = 0 
-                break
-    return board
+    for col in range(W):
+        bricks = []
+        # 해당 열에 있는 0이 아닌 벽돌을 리스트로 만듦
+        for row in range(H):
+            if board[row][col] != 0:
+                bricks.append(board[row][col])
+        # 해당 열을 비우고
+        for row in range(H):
+            board[row][col] = 0
+        #가장 밑에서부터 채우기 시작
+        row = H - 1
+        while bricks:
+            board[row][col] = bricks.pop()
+            row -= 1
 
 def count_brick(board):
     count = 0
-    for row in range(W):
-        for col in range(H):
-            if board[row][col] >= 1:
+    for row in range(H):
+        for col in range(W):
+            if board[row][col] != 0:
                 count += 1
     return count
 
-def dfs():
-    board = init_board
-    min_count = 0
-    n_count = 0
-    for col in range(H):
-        for row in range(W):
-            if board[row][col] >= 1:
-                board = break_bricks(row, col, board)
-                board = drop_bricks(board)
-                n_count += 1
-                if n_count == 3:
-                    cur_count = count_brick
-                    min_count = min(min_count, cur_count)
+def dfs(depth, board):
+    if depth == N:
+        return count_brick(board)
+    min_count = float('inf')
+    found = False
+    # 구슬 떨어트릴 열 탐색
+    for col in range(W):
+        #각 열마다 가장 위에 있는 행 찾기
+        top_row=-1
+        for row in range(H):
+            if board[row][col] != 0:
+                top_row = row
+                break
+        # 열이 비어있음
+        if top_row == -1:
+            continue
+        found = True
+        # 열을 선택할 때마다 현재 보드를 복사
+        next_board = [line[:] for line in board]
+        break_bricks(top_row, col, next_board)
+        drop_bricks(next_board)
+        
+        next_count = dfs(depth+1, next_board)
+        min_count = min(min_count, next_count)
+
+    if not found:
+        return 0
     return min_count
 
                 
-
-
 T = int(input())
 for test_case in range(1, T + 1):
     N, W, H = map(int, input().split())
     init_board = [list(map(int, input().split())) for _ in range(H)]
+    depth = 0
+    result = dfs(depth, init_board)
 
-    result = dfs()
-
-    print(f'#{{result}}')
+    print(f'#{test_case} {result}')
