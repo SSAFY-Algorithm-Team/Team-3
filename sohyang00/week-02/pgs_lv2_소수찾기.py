@@ -28,3 +28,8 @@ def solution(numbers):
             candidates.add(int(''.join(arranged)))
 
     return sum(is_prime(number) for number in candidates)
+
+# https://velog.io/@changhee09/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%86%8C%EC%88%98%EC%9D%98-%ED%8C%90%EB%B3%84-%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98-%EC%B2%B4
+# 에라토스테네스의 체 알고리즘
+# 시간복잡도 nloglogn
+# 단점: 메모리가 많이 필요해서 최대값이 작을 때 사용 가능
