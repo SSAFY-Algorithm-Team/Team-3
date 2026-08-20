@@ -87,6 +87,7 @@ main
 └── cheese-flavor/
 └── sohyang00/
 └── Sunjae-L22/
+└── zoo0o/
 ```
 
 **본인 닉네임 폴더 안에만** 파일을 만들면 충돌이 나지 않습니다.
@@ -133,6 +134,7 @@ main
 | `refactor` | 기존 풀이 개선 | `refactor: [SWEA 6190] 판정 로직 함수 분리`         |
 | `fix`      | 오답 수정      | `fix: [SWEA 2805] 경계 조건 처리`                   |
 | `docs`     | 문서 수정      | `docs: README 2주차 문제 추가`                      |
+| `chore`    | 저장소 관리    | `chore: 팀원별 주차 폴더 생성`                      |
 
 ---
 
