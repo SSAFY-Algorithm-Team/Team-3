@@ -1,6 +1,6 @@
 # 알고리즘 스터디 (삼성 SW 역량테스트 B형 대비)
 
-> SSAFY 알고리즘 스터디 · 5인 · 매주 목요일
+> SSAFY 알고리즘 스터디 · 6인 · 매주 목요일
 
 📖 **처음 오셨나요? → [깃허브 사용 가이드](GITHUB_GUIDE.md)**
 
@@ -41,7 +41,6 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 - 각자 이번 주에 **가장 이야기하고 싶은 문제 1개**를 골라 발표합니다.
 - 잘 푼 문제여도, **못 푼 문제여도 괜찮습니다.** 오히려 막힌 문제가 이야기하기 좋아요.
 - 발표할 문제는 PR에 미리 적어주세요. (겹치면 팀장이 목요일 아침에 조정)
-- 8분 타이머를 켭니다.
 
 ### 코어 문제 코드 비교
 
@@ -56,8 +55,6 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
    - 틀린 사람은 어디서 틀렸나?
 4. **정리** (5분) — "어느 게 정답"이 아니라 "언제 어느 게 유리한지"
 
-> 📌 3주차부터 **발제**(그 주 알고리즘 주제의 골격 정리) 도입 예정입니다.
-> 세션 리듬이 잡히고 나서 시작합니다.
 
 ---
 
@@ -72,7 +69,8 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
-## 1주차 문제 (17문제)
+<details>
+<summary><h2>1주차 — SWEA D2~D3 구현 (17문제)</h2></summary>
 
 **출처:** SWEA 역량테스트 리스트업 → IM 대비 추천 세트 (D2~D3만)
 
@@ -84,8 +82,7 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 | --------- | ---------- | ------ | ----------------------------------------------------------------------------------------------------------------- |
 | **25052** | **등산로** | D2     | [바로가기](https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AZiyl6OKpUjHBIP9) |
 
-<details>
-<summary><b>D2 (10문제)</b></summary>
+### D2 (10문제)
 
 | 번호  | 제목                           | 링크                                                                                                              |
 | ----- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------- |
@@ -100,10 +97,7 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 | 26045 | 부분 수열 판별                 | [바로가기](https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AZwe0FZaG1bHBIPa) |
 | 26059 | 과일 등급 분류                 | [바로가기](https://swexpertacademy.com/main/code/userProblem/userProblemDetail.do?contestProbId=AZwl9ifa3dLHBIT3) |
 
-</details>
-
-<details>
-<summary><b>D3 (7문제)</b></summary>
+### D3 (7문제)
 
 | 번호  | 제목                         | 링크                                                                                                      |
 | ----- | ---------------------------- | --------------------------------------------------------------------------------------------------------- |
@@ -119,7 +113,8 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
-## 2주차 문제 (5문제)
+<details>
+<summary><h2>2주차 — 완전탐색 (5문제 + 공통 1문제)</h2></summary>
 
 **출처:** SWEA 역량테스트 리스트업 → A형 대비 추천 세트 / 프로그래머스 코딩테스트 고득점 Kit → 완전탐색
 
@@ -134,6 +129,14 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 | -------- | ------------- | ------ | ------------------------------------------------------------------------------------------------ |
 | **5656** | **벽돌 깨기** | D3     | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo) |
 
+
+### 공통 문제
+
+조직 내 전체 스터디에서 다 같이 푼 문제입니다.
+
+| 번호 | 제목      | 난이도 | 링크                                                                                             |
+| ---- | --------- | ------ | ------------------------------------------------------------------------------------------------ |
+| 1247 | 최적 경로 | D5     | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15OZ4qAPICFAYD) |
 
 ### SWEA (2문제)
 
@@ -150,6 +153,55 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 | 소수 찾기       | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42839) |
 | 피로도          | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/87946) |
 
+</details>
+
+---
+
+<details open>
+<summary><h2>3주차 — DFS/BFS + B형 기출 (11문제)</h2></summary>
+
+**출처:** 프로그래머스 코딩테스트 고득점 Kit → DFS/BFS / SWEA → Pro (B형 기출)
+
+3주차부터는 **유형별 학습 + B형 기출 병행** 으로 갑니다.
+
+- **프로그래머스 DFS/BFS 세트는 전부** 풉니다 — 탐색 유형 감각 잡기용
+- **B형 기출은 이틀에 1문제** 페이스로, 다음 목요일 세션 전까지 4문제를 풉니다
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 제목              | 난이도 | 링크                                                                       |
+| ----------------- | ------ | -------------------------------------------------------------------------- |
+| **아이템 줍기**   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/87694) |
+
+
+### 프로그래머스 — DFS/BFS (7문제)
+
+| 제목               | 난이도 | 링크                                                                       |
+| ------------------ | ------ | -------------------------------------------------------------------------- |
+| 타겟 넘버          | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/43165) |
+| 게임 맵 최단거리   | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1844)  |
+| 네트워크           | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/43162) |
+| 단어 변환          | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/43163) |
+| 여행경로           | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/43164) |
+| 아이템 줍기 ⭐     | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/87694) |
+| 퍼즐 조각 채우기   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/84021) |
+
+### B형 기출 (4문제 · 이틀에 1문제)
+
+| 순서 | 제목             | 권장 기간 | 링크                                     |
+| ---- | ---------------- | --------- | ---------------------------------------- |
+| 1 | 단어장 | 목 · 금 | [바로가기](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AZt8IiBqxEDHBIN6&contestProbId=AZwdOG5aC2rHBIPa&probBoxId=AZt8IiBqxEHHBIN6&type=PROBLEM&problemBoxTitle=B%ED%98%95+%EA%B8%B0%EC%B6%9C&problemBoxCnt=31) |
+| 2 | 기계식 주차장 | 토 · 일 | [바로가기](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AZt8IiBqxEDHBIN6&contestProbId=AZvfGm7qDZ7HBIN6&probBoxId=AZt8IiBqxEHHBIN6&type=PROBLEM&problemBoxTitle=B%ED%98%95+%EA%B8%B0%EC%B6%9C&problemBoxCnt=31) |
+| 3 | 타워디펜스게임 | 월 · 화 | [바로가기](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AZt8IiBqxEDHBIN6&contestProbId=AZvfDDtKDNjHBIN6&probBoxId=AZt8IiBqxEHHBIN6&type=PROBLEM&problemBoxTitle=B%ED%98%95+%EA%B8%B0%EC%B6%9C&problemBoxCnt=31) |
+| 4 | 빙하의 이동 | 수 · 목 | [바로가기](https://swexpertacademy.com/main/talk/solvingClub/problemView.do?solveclubId=AZt8IiBqxEDHBIN6&contestProbId=AZve05OqCl3HBIN6&probBoxId=AZt8IiBqxEHHBIN6&type=PROBLEM&problemBoxTitle=B%ED%98%95+%EA%B8%B0%EC%B6%9C&problemBoxCnt=31) |
+
+> 4번 문제는 PR 마감(수요일 밤) 이후에 걸치니, 마감 시점까지 진행한 만큼 커밋하고
+> 남은 부분은 세션에서 이야기합니다.
+
+</details>
+
 ---
 
 ## 제출 방법 요약
@@ -157,9 +209,9 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-02
+git switch -c {깃허브 닉네임}/week-03
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-02
+git push -u origin {깃허브 닉네임}/week-03
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
