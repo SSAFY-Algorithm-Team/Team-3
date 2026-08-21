@@ -1,4 +1,4 @@
-# 프로그래머스 Lv2. 게임맵최단거리
+# 프로그래머스 Lv2. 타겟넘버
 # https://school.programmers.co.kr/learn/courses/30/lessons/43165
 # 소요시간: 15분 / 시도: 1회
 
