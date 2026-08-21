@@ -1,6 +1,6 @@
 # 프로그래머스 Lv2. 타겟 넘버
 # https://school.programmers.co.kr/learn/courses/30/lessons/43165
-# Unsolved
+# Solved with AI help
 
 
 def solution(numbers, target):
