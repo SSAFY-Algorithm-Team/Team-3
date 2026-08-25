@@ -1,9 +1,6 @@
 # 프로그래머스 Lv2. 게임 맵 최단거리
 # https://school.programmers.co.kr/learn/courses/30/lessons/1844
-# Solved with AI help
-
-from collections import deque
-
+# 설계 > AI 사용
 
 from collections import deque
 

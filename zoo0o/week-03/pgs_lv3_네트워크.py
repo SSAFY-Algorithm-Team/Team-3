@@ -1,6 +1,6 @@
 # 프로그래머스 Lv3. 네트워크
 # https://school.programmers.co.kr/learn/courses/30/lessons/43162?language=python3
-# 소요시간: 1시간 / 시도: 3회
+# 구현 > AI
 
 
 def solution(n, computers):
