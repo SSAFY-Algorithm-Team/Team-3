@@ -1,49 +1,62 @@
-# 내 풀이: 가로/세로/대각선을 각각 따로 구현
-# 정석 풀이: 4방향을 방향 배열로 묶어서 한 번에 처리
+# 내 풀이: DFS + visited + 백트래킹으로 가능한 경로를 하나씩 탐색
+# 정석 풀이: 오일러 경로를 이용해 모든 항공권을 정확히 한 번씩 사용
 
-T = int(input())
+from collections import defaultdict
 
-for tc in range(1, T + 1):
-    N = int(input())
-    board = [input() for _ in range(N)]
 
-    # 가로, 세로, ↘, ↙
-    dr = [0, 1, 1, 1]
-    dc = [1, 0, 1, -1]
+def solution(tickets):
+    # 오일러 경로:
+    # 그래프의 모든 간선(여기서는 항공권)을 정확히 한 번씩 사용하는 경로
+    #
+    # 공항 = 정점
+    # 항공권 = 간선
+    #
+    # 이 문제는 "모든 항공권을 반드시 사용"해야 하므로
+    # 오일러 경로 문제로 볼 수 있다.
 
-    result = "NO"
+    graph = defaultdict(list)
 
-    for r in range(N):
-        for c in range(N):
+    # pop()은 리스트의 마지막 값을 꺼내므로
+    # 알파벳이 빠른 공항을 마지막에 두기 위해 역순 정렬
+    tickets.sort(reverse=True)
 
-            # 돌이 없는 칸에서는 시작할 필요 없음
-            if board[r][c] != "o":
-                continue
+    # 출발 공항별로 갈 수 있는 도착 공항 저장
+    #
+    # 예:
+    # ICN -> SFO
+    # ICN -> ATL
+    #
+    # graph["ICN"] = ["SFO", "ATL"]
+    # pop()하면 "ATL"부터 꺼내짐
+    for start, end in tickets:
+        graph[start].append(end)
 
-            for d in range(4):
-                count = 0
+    route = []
 
-                for move in range(5):
-                    nr = r + dr[d] * move
-                    nc = c + dc[d] * move
+    def dfs(current):
+        # 현재 공항에서 아직 사용하지 않은 항공권이 있다면
+        # 하나를 꺼내서 그 도착 공항으로 이동
+        while graph[current]:
+            # 항공권 하나 사용
+            # pop()으로 꺼냈으므로 같은 항공권을 다시 사용할 수 없음
+            next_airport = graph[current].pop()
 
-                    # 범위를 벗어나거나 돌이 아니면 중단
-                    if not (0 <= nr < N and 0 <= nc < N):
-                        break
+            # 다음 공항에서도 계속 항공권을 사용하며 이동
+            dfs(next_airport)
 
-                    if board[nr][nc] != "o":
-                        break
+        # 여기까지 왔다는 것은
+        # 현재 공항에서 더 이상 사용할 수 있는 항공권이 없다는 뜻
+        #
+        # 이때 현재 공항을 route에 추가한다.
+        #
+        # 즉, 갈 때 추가하는 것이 아니라
+        # "더 이상 갈 곳이 없어서 돌아올 때" 추가한다.
+        #
+        # 그래서 route에는 최종 경로가 거꾸로 저장된다.
+        route.append(current)
 
-                    count += 1
+    # 문제에서 항상 ICN에서 출발한다고 했으므로 ICN부터 탐색
+    dfs("ICN")
 
-                if count == 5:
-                    result = "YES"
-                    break
-
-            if result == "YES":
-                break
-
-        if result == "YES":
-            break
-
-    print(f"#{tc} {result}")
+    # route는 뒤에서부터 저장되므로 마지막에 뒤집는다.
+    return route[::-1]

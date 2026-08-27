@@ -20,31 +20,33 @@ from collections import deque
 
 
 def solution(rectangle, characterX, characterY, itemX, itemY):
-    # x, y 좌표를 그대로 사용하기 위해 0 ~ max 좌표까지 생성
-    max_x = max(rect[2] for rect in rectangle)
-    max_y = max(rect[3] for rect in rectangle)
-
-    maps = [[0] * (max_y + 1) for _ in range(max_x + 1)]
-
-    # 1. 모든 직사각형 영역을 1로 채우기
+    # 1. 좌표 2배
     for i in range(len(rectangle)):
-        x1, y1, x2, y2 = rectangle[i]
+        rectangle[i] = [value * 2 for value in rectangle[i]]
 
+    characterX *= 2
+    characterY *= 2
+    itemX *= 2
+    itemY *= 2
+
+    # 좌표 최대 50 → 2배하면 최대 100
+    board = [[0] * 102 for _ in range(102)]
+
+    # 2. 모든 직사각형 영역을 1로 채우기
+    for x1, y1, x2, y2 in rectangle:
         for x in range(x1, x2 + 1):
             for y in range(y1, y2 + 1):
-                maps[x][y] = 1
+                board[x][y] = 1
 
-    # 2. 각 직사각형의 내부를 2로 변경
-    # 다른 직사각형의 테두리와 겹쳐도 내부라면 이동할 수 없음
-    for i in range(len(rectangle)):
-        x1, y1, x2, y2 = rectangle[i]
-
+    # 3. 직사각형 내부 제거
+    # → 최종적으로 바깥 테두리만 1
+    for x1, y1, x2, y2 in rectangle:
         for x in range(x1 + 1, x2):
             for y in range(y1 + 1, y2):
-                maps[x][y] = 2
+                board[x][y] = 0
 
-    # 3. BFS 준비
-    visited = [[0] * (max_y + 1) for _ in range(max_x + 1)]
+    # 4. BFS
+    visited = [[0] * 102 for _ in range(102)]
 
     queue = deque()
     queue.append((characterX, characterY, 0))
@@ -53,20 +55,17 @@ def solution(rectangle, characterX, characterY, itemX, itemY):
     dx = [-1, 1, 0, 0]
     dy = [0, 0, -1, 1]
 
-    # 4. 테두리인 1만 따라 BFS
     while queue:
-        x, y, count = queue.popleft()
+        x, y, distance = queue.popleft()
 
         if x == itemX and y == itemY:
-            return count
+            return distance // 2
 
         for d in range(4):
             nx = x + dx[d]
             ny = y + dy[d]
 
-            if 0 <= nx <= max_x and 0 <= ny <= max_y:
-                if maps[nx][ny] == 1 and visited[nx][ny] == 0:
+            if 0 <= nx < 102 and 0 <= ny < 102:
+                if board[nx][ny] == 1 and visited[nx][ny] == 0:
                     visited[nx][ny] = 1
-                    queue.append((nx, ny, count + 1))
-
-    return 0
+                    queue.append((nx, ny, distance + 1))
