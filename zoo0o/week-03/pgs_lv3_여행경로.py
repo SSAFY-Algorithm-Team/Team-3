@@ -1,5 +1,5 @@
-# 프로그래머스 Lv3. 단어 변환
-# https://school.programmers.co.kr/learn/courses/30/lessons/43163
+# 프로그래머스 Lv3. 여행 경로
+# https://school.programmers.co.kr/learn/courses/30/lessons/43164
 # 구현 > AI
 
 
