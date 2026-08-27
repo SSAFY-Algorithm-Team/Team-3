@@ -26,7 +26,8 @@ def solution(numbers):
     for i in new_numbers:
         possible = True   #그냥 파시블 사랑함 청년
         
-        #다른 로직 분명있었는데 2기준 절반이상은 안넘으니까 난 이렇게 할게용
+        # 다른 로직 분명있었는데 2기준 절반이상은 안넘으니까 난 이렇게 할게용
+        # 로그 n으로 진행하면 더 빠름! => 앞으로 이거 사용하기
         for j in range(1, (i//2)): 
             if i % (j+1) == 0:
                 possible = False
