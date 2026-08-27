@@ -157,7 +157,7 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
-<details open>
+<details>
 <summary><h2>3주차 — DFS/BFS + B형 기출 (11문제)</h2></summary>
 
 **출처:** 프로그래머스 코딩테스트 고득점 Kit → DFS/BFS / SWEA → Pro (B형 기출)
@@ -204,14 +204,56 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
+<details open>
+<summary><h2>4주차 — 해시 + SQL(SELECT) (8문제)</h2></summary>
+
+**출처:** 프로그래머스 코딩테스트 고득점 Kit → 해시 / 프로그래머스 SQL 고득점 Kit → SELECT
+
+4주차는 **문제 수를 줄였습니다.** 대신 두 가지를 새로 시작합니다.
+
+- **해시 세트는 전부** 풉니다 — "무엇을 키로 잡을 것인가"를 반복해서 연습하는 세트입니다
+- **SQL 코테 준비 시작** — SELECT 기초 3문제로 가볍게 발을 담급니다
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 제목             | 난이도 | 링크                                                                       |
+| ---------------- | ------ | -------------------------------------------------------------------------- |
+| **베스트앨범**   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42579) |
+
+### 프로그래머스 — 해시 (5문제)
+
+| 제목                   | 난이도 | 링크                                                                       |
+| ---------------------- | ------ | -------------------------------------------------------------------------- |
+| 완주하지 못한 선수     | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42576) |
+| 폰켓몬                 | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1845)  |
+| 전화번호 목록          | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42577) |
+| 의상                   | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42578) |
+| 베스트앨범 ⭐          | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42579) |
+
+### 프로그래머스 SQL — SELECT (3문제)
+
+| 제목                         | 난이도 | 링크                                                                        |
+| ---------------------------- | ------ | --------------------------------------------------------------------------- |
+| 평균 일일 대여 요금 구하기   | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/151136) |
+| 인기있는 아이스크림          | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/133024) |
+| 과일로 만든 아이스크림 고르기 | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/133025) |
+
+> SQL 문제는 `.sql` 파일로 제출합니다. 커밋 메시지는 `solve: [SQL Lv1] 인기있는 아이스크림` 형식으로 써주세요.
+
+</details>
+
+---
+
 ## 제출 방법 요약
 
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-03
+git switch -c {깃허브 닉네임}/week-04
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-03
+git push -u origin {깃허브 닉네임}/week-04
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
