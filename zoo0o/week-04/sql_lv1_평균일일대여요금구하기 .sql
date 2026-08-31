@@ -1,4 +1,4 @@
-# 프로그래머스 SQL Lv2. 평균 일일 대여 요금 구하기
+# 프로그래머스 SQL Lv1. 평균 일일 대여 요금 구하기
 # https://school.programmers.co.kr/learn/courses/30/lessons/151136
 
 SELECT ROUND(AVG(DAILY_FEE)) AS AVERAGE_FEE
