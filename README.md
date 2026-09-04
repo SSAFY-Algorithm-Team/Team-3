@@ -69,6 +69,51 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
+## SQL 트랙
+
+5주차부터 SQL을 본격적으로 시작합니다.
+**프로그래머스 SQL 고득점 Kit 106문제를 8주에 완주**하는 것이 목표이고,
+알고리즘 문제와 병행하므로 매주 알고리즘 세트 + SQL 한 묶음씩 가져갑니다.
+
+<details>
+<summary><b>📋 SQL 8주 로드맵 — 전체 106문제 (펼치기)</b></summary>
+
+영역(SELECT/JOIN 등)이 아니라 **그 주에 쓰는 SQL 문법**을 기준으로 묶었습니다.
+
+| SQL 주차 | 스터디 주차 | 주제 | 문제 수 | 난이도 |
+| :---: | :---: | --- | :---: | --- |
+| 1 | 5주차 | 단일 테이블 기본 조회 | 18 | Lv1 위주 |
+| 2 | 6주차 | 집계 함수 | 13 | Lv1~3 |
+| 3 | 7주차 | NULL 처리 + GROUP BY 입문 | 14 | Lv1~3 |
+| 4 | 8주차 | GROUP BY 심화 + CASE | 12 | Lv2~4 |
+| 5 | 9주차 | 문자열 · 날짜 | 14 | Lv1~3 |
+| 6 | 10주차 | JOIN 기본 | 11 | Lv2~4 |
+| 7 | 11주차 | 서브쿼리 + JOIN 심화 | 12 | Lv2~5 |
+| 8 | 12주차 | 종합 · 고난도 | 12 | Lv2~5 |
+
+> 문제 수는 주차마다 다르지만 소요 시간은 비슷합니다.
+> SQL 1주차는 18문제여도 전부 Lv1이라 1시간 남짓이고, 8주차는 12문제인데 Lv4 이상이 8개입니다.
+
+> **스터디 주차 매핑은 잠정입니다.** 알고리즘 진도에 따라 한 주 쉬거나 밀릴 수 있고,
+> 그때는 이 표의 매핑만 조정합니다. **SQL 주제 순서 자체는 바뀌지 않습니다.**
+
+### SQL 진행 규칙
+
+1. **언어는 MySQL로 통일** — 최근 추가된 문제는 Oracle을 지원하지 않습니다
+2. **파일명**: `sql_lv{레벨}_{문제명}.sql` (예: `sql_lv1_인기있는아이스크림.sql`)
+3. **커밋 메시지**: `solve: [SQL Lv1] 인기있는 아이스크림`
+4. **Lv4 이상은 선택** — 필수 문제 리뷰를 먼저 끝내고 남는 시간에 다룹니다
+
+### 세션에서 SQL을 다루는 방식
+
+SQL은 문제당 5~15분이라 "못 푼 사람 설명 듣기"에 쓸 시간이 적습니다.
+대신 **같은 문제를 다르게 푼 쿼리를 비교**하는 데 시간을 씁니다.
+서브쿼리 / `HAVING` / `RANK()` 로 다 풀리는 문제가 많아서, 각자 다르게 풀어오면 그 자체로 토론거리가 됩니다.
+
+</details>
+
+---
+
 <details>
 <summary><h2>1주차 — SWEA D2~D3 구현 (17문제)</h2></summary>
 
@@ -204,7 +249,7 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
-<details open>
+<details>
 <summary><h2>4주차 — 해시 + SQL(SELECT) (8문제)</h2></summary>
 
 **출처:** 프로그래머스 코딩테스트 고득점 Kit → 해시 / 프로그래머스 SQL 고득점 Kit → SELECT
@@ -246,14 +291,98 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ---
 
+<details open>
+<summary><h2>5주차 — 스택/큐 · 힙 + SQL 본격 시작 (9 + 15문제)</h2></summary>
+
+**출처:** 프로그래머스 코딩테스트 고득점 Kit → [스택/큐](https://school.programmers.co.kr/learn/courses/30/parts/12081), [힙](https://school.programmers.co.kr/learn/courses/30/parts/12117) / 프로그래머스 SQL 고득점 Kit → SQL 1주차
+
+- **스택/큐 · 힙 세트는 전부** 풉니다 — "어떤 자료구조를 고르면 O(N²)이 O(N log N)이 되는가"를 보는 세트입니다
+- **SQL은 이번 주부터 본격 시작** — SQL 1주차(단일 테이블 기본 조회) 15문제. 전부 Lv1이라 1시간 남짓 걸립니다
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 제목                  | 난이도 | 링크                                                                       |
+| --------------------- | ------ | -------------------------------------------------------------------------- |
+| **디스크 컨트롤러**   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42627) |
+
+> 힙을 두 개 굴릴지, 정렬 후 하나만 굴릴지에서 갈립니다. "언제 힙에 넣는가"가 핵심.
+
+<details>
+<summary><b>🧩 알고리즘 — 스택/큐 · 힙 (9문제)</b></summary>
+
+### 스택/큐 (6문제)
+
+| 제목                | 난이도 | 링크                                                                       |
+| ------------------- | ------ | -------------------------------------------------------------------------- |
+| 같은 숫자는 싫어    | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12906) |
+| 기능개발            | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42586) |
+| 올바른 괄호         | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/12909) |
+| 프로세스            | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42587) |
+| 다리를 지나는 트럭  | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42583) |
+| 주식가격            | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42584) |
+
+### 힙 (3문제)
+
+| 제목                 | 난이도 | 링크                                                                       |
+| -------------------- | ------ | -------------------------------------------------------------------------- |
+| 더 맵게              | Lv2    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42626) |
+| 디스크 컨트롤러 ⭐   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42627) |
+| 이중우선순위큐       | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42628) |
+
+> Python은 `heapq`가 최소 힙만 지원합니다. `이중우선순위큐`에서 최대값을 뺄 때
+> 부호를 뒤집을지, 힙 두 개를 동기화할지가 갈리는 지점입니다.
+
+</details>
+
+<details>
+<summary><b>🗄️ SQL 1주차 — 단일 테이블 기본 조회 (15문제)</b></summary>
+
+`SELECT` / `WHERE` / `ORDER BY` / `LIMIT` 만으로 전부 풀립니다.
+
+| 제목                                      | 난이도 | 링크                                                                        |
+| ----------------------------------------- | ------ | --------------------------------------------------------------------------- |
+| 모든 레코드 조회하기                      | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59034)  |
+| 역순 정렬하기                             | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59035)  |
+| 동물의 아이디와 이름                      | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59403)  |
+| 아픈 동물 찾기                            | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59036)  |
+| 어린 동물 찾기                            | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59037)  |
+| 여러 기준으로 정렬하기                    | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59404)  |
+| 상위 n개 레코드                           | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59405)  |
+| 조건에 맞는 도서 리스트 출력하기          | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/144853) |
+| 12세 이하인 여자 환자 목록 출력하기       | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/132201) |
+| 흉부외과 또는 일반외과 의사 목록 출력하기 | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/132203) |
+| 강원도에 위치한 생산공장 목록 출력하기    | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/131112) |
+| 조건에 부합하는 중고거래 댓글 조회하기    | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/164673) |
+| Python 개발자 찾기                        | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/276013) |
+| 가장 큰 물고기 10마리 구하기              | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/298517) |
+| 특정 형질을 가지는 대장균 찾기            | Lv1    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/301646) |
+
+> SQL 1주차 세트는 원래 18문제인데, `평균 일일 대여 요금 구하기` · `인기있는 아이스크림` ·
+> `과일로 만든 아이스크림 고르기` 3개는 4주차에 이미 풀었으므로 15문제입니다.
+
+**발제 주제 — SQL 실행 순서**
+
+`FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT`
+
+이걸 첫 주에 못 박아두면 "WHERE에 별칭을 왜 못 쓰는지", "HAVING과 WHERE의 차이" 같은 질문이 이후 전부 정리됩니다.
+`특정 형질을 가지는 대장균 찾기`는 비트 연산(`&`)을 쓰는 유일한 Lv1이라 여기서 짚어두면 나중이 수월합니다.
+
+</details>
+
+</details>
+
+---
+
 ## 제출 방법 요약
 
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-04
+git switch -c {깃허브 닉네임}/week-05
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-04
+git push -u origin {깃허브 닉네임}/week-05
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
