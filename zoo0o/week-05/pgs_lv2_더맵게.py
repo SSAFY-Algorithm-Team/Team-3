@@ -10,12 +10,15 @@ def solution(scoville, K):
     answer = 0
 
     # scoville[0]: 항상 가장 작은 값
-    while scoville[0] < K :
-        # 여기에서 음식이 2개 이상인지 확인 필요
+    while scoville[0] < K:
 
-        # 가장 작은 값 꺼내기
+        # 2개를 섞어야 하는데 음식이 1개만 남으면 불가능
+        if len(scoville) < 2:
+            return -1
+
+        # 가장 작은 값 2개 꺼내기
         first = heapq.heappop(scoville)
-        second = heapq.heappop(scoville) 
+        second = heapq.heappop(scoville)
 
         mixed = first + second * 2
 
