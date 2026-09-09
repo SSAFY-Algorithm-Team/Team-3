@@ -1,6 +1,6 @@
 # 프로그래머스 Lv2. 프로세스
 # https://school.programmers.co.kr/learn/courses/30/lessons/42587
-# 구현 AI
+# AI
 
 from collections import deque
 

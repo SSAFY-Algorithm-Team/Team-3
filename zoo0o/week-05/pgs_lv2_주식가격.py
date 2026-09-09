@@ -1,6 +1,6 @@
-# 프로그래머스 Lv2. 다리를 지나는 트럭
-# https://school.programmers.co.kr/learn/courses/30/lessons/42583
-
+# 프로그래머스 Lv2. 주식가격
+# https://school.programmers.co.kr/learn/courses/30/lessons/42628
+#  소요시간: 20분 / 시도: 2회
 
 def solution(prices):
     answer = []
