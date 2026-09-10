@@ -71,7 +71,7 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 ## SQL 트랙
 
-5주차부터 SQL을 본격적으로 시작합니다.
+5주차부터 SQL을 본격적으로 시작합니다. (**6주차는 알고리즘에 집중하기 위해 한 주 쉽니다** — 아래 표의 매핑을 한 주씩 밀었습니다.)
 **프로그래머스 SQL 고득점 Kit 106문제를 8주에 완주**하는 것이 목표이고,
 알고리즘 문제와 병행하므로 매주 알고리즘 세트 + SQL 한 묶음씩 가져갑니다.
 
@@ -82,14 +82,15 @@ B형은 4시간 동안 1문제를 풀며, Main 함수는 수정하지 않고 주
 
 | SQL 주차 | 스터디 주차 | 주제 | 문제 수 | 난이도 |
 | :---: | :---: | --- | :---: | --- |
-| 1 | 5주차 | 단일 테이블 기본 조회 | 18 | Lv1 위주 |
-| 2 | 6주차 | 집계 함수 | 13 | Lv1~3 |
-| 3 | 7주차 | NULL 처리 + GROUP BY 입문 | 14 | Lv1~3 |
-| 4 | 8주차 | GROUP BY 심화 + CASE | 12 | Lv2~4 |
-| 5 | 9주차 | 문자열 · 날짜 | 14 | Lv1~3 |
-| 6 | 10주차 | JOIN 기본 | 11 | Lv2~4 |
-| 7 | 11주차 | 서브쿼리 + JOIN 심화 | 12 | Lv2~5 |
-| 8 | 12주차 | 종합 · 고난도 | 12 | Lv2~5 |
+| 1 | 5주차 ✅ | 단일 테이블 기본 조회 | 18 | Lv1 위주 |
+| — | **6주차** | **쉬는 주 — 알고리즘 집중** | — | — |
+| 2 | 7주차 | 집계 함수 | 13 | Lv1~3 |
+| 3 | 8주차 | NULL 처리 + GROUP BY 입문 | 14 | Lv1~3 |
+| 4 | 9주차 | GROUP BY 심화 + CASE | 12 | Lv2~4 |
+| 5 | 10주차 | 문자열 · 날짜 | 14 | Lv1~3 |
+| 6 | 11주차 | JOIN 기본 | 11 | Lv2~4 |
+| 7 | 12주차 | 서브쿼리 + JOIN 심화 | 12 | Lv2~5 |
+| 8 | 13주차 | 종합 · 고난도 | 12 | Lv2~5 |
 
 > 문제 수는 주차마다 다르지만 소요 시간은 비슷합니다.
 > SQL 1주차는 18문제여도 전부 Lv1이라 1시간 남짓이고, 8주차는 12문제인데 Lv4 이상이 8개입니다.
@@ -291,7 +292,7 @@ SQL은 문제당 5~15분이라 "못 푼 사람 설명 듣기"에 쓸 시간이 �
 
 ---
 
-<details open>
+<details>
 <summary><h2>5주차 — 스택/큐 · 힙 + SQL 본격 시작 (9 + 15문제)</h2></summary>
 
 **출처:** 프로그래머스 코딩테스트 고득점 Kit → [스택/큐](https://school.programmers.co.kr/learn/courses/30/parts/12081), [힙](https://school.programmers.co.kr/learn/courses/30/parts/12117) / 프로그래머스 SQL 고득점 Kit → SQL 1주차
@@ -373,6 +374,159 @@ SQL은 문제당 5~15분이라 "못 푼 사람 설명 듣기"에 쓸 시간이 �
 
 </details>
 
+<details open>
+<summary><h2>6주차 — SWEA 커리큘럼 전 범위 (40문제)</h2></summary>
+
+**출처:** SWEA Solving Club → [16기 대전 6반 알고리즘](https://swexpertacademy.com/main/talk/solvingClub/clubDetail.do?solveclubId=AZ9kDS86wCTHBITH)
+
+이번 주는 9/15 A형 테스트, 9/19 B형 테스트를 대비하기 위해 **알고리즘에만 집중합니다. SQL은 쉽니다.**
+
+> **제출은 SWEA 사이트 + 레포 둘 다** 입니다. 문제함 제출현황이 세션 체크인 자료가 되니
+> 사이트 제출을 빠뜨리지 마세요. 파일명은 평소와 같이 `swea_{번호}_{문제명}.py` 입니다.
+
+> `어디에 단어가 들어갈 수 있을까`(1979) · `농작물 수확하기`(2805) 는 **1주차에 이미 푼 문제**입니다.
+> 다시 풀어도 좋고, 1주차 코드를 Solving Club에 제출만 해서 문제함을 채워도 됩니다.
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| **2115** | **[모의 SW 역량테스트] 벌꿀채취** | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) |
+
+<details>
+<summary><b>🧩 문제함 8개 — 전체 40문제 (펼치기)</b></summary>
+
+#### 알고리즘 기본 (6문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 9490 | 풍선팡 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AXAerAPaVXMDFARP) |
+| 4834 | [S/W 문제해결 기본] 1일차 - 숫자 카드 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTLVouKpUgDFAVT) |
+| 4828 | [S/W 문제해결 기본] 1일차 - min max | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTLQZwKon4DFAVT) |
+| 2001 | 파리 퇴치 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PzOCKAigDFAUq) |
+| 1979 | 어디에 단어가 들어갈 수 있을까 (1주차 중복) | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PuPq6AaQDFAUq) |
+| 1961 | 숫자 배열 회전 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5Pq-OKAVYDFAUq) |
+
+> D2 워밍업 세트입니다. `파리 퇴치` · `풍선팡` 은 델타 배열을 어떻게 잡는지만 보고 빠르게 넘어가세요.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kDS86wCXHBITH&leftPage=1)</sub>
+
+#### 재귀 (4문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 6808 | 규영이와 인영이의 카드게임 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWgv9va6HnkDFAW0) |
+| 4836 | [S/W 문제해결 기본] 2일차 - 색칠하기 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTLZMRKpsYDFAVT) |
+| 2805 | 농작물 수확하기 (1주차 중복) | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GLXqKAWYDFAXB) |
+| 1210 | [S/W 문제해결 기본] 2일차 - Ladder1 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh) |
+
+> `Ladder1` 은 재귀로도 역추적으로도 풀립니다. `규영이와 인영이의 카드게임` 은 순열 + 재귀가 붙는 첫 문제입니다.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawC3HBITH&leftPage=1)</sub>
+
+#### 순열과 조합 (5문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 4831 | [S/W 문제해결 기본] 1일차 - 전기버스 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTLS24ao9ADFAVT) |
+| 4014 | [모의 SW 역량테스트] 활주로 건설 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH) |
+| 4012 | [모의 SW 역량테스트] 요리사 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeUtVakTMDFAVH) |
+| 2382 | [모의 SW 역량테스트] 미생물 격리 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV597vbqAH0DFAVl) |
+| 1240 | [S/W 문제해결 응용] 1일차 - 단순 2진 암호코드 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15FZuqAL4CFAYD) |
+
+> `요리사` 는 조합, `활주로 건설` 은 부분집합, `미생물 격리` 는 시뮬레이션입니다. **같은 문제함 안에서 쓰는 도구가 다릅니다.**
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawC7HBITH&leftPage=1)</sub>
+
+#### 스택과 큐 (5문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 5432 | 쇠막대기 자르기 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWVl47b6DGMDFAXm) |
+| 2477 | [모의 SW 역량테스트] 차량 정비소 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) |
+| 1225 | [S/W 문제해결 기본] 7일차 - 암호생성기 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14uWl6AF0CFAYD) |
+| 1222 | [S/W 문제해결 기본] 6일차 - 계산기1 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14mbSaAEwCFAYD) |
+| 1220 | [S/W 문제해결 기본] 5일차 - Magnetic | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14hwZqABsCFAYD) |
+
+> `계산기1` 은 중위 → 후위 변환, `Magnetic` 은 스택을 안 써도 풀리는 문제입니다. 후자는 "왜 스택 문제함에 있는가"를 같이 이야기해 볼 만합니다.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawC_HBITH&leftPage=1)</sub>
+
+#### 트리와 그래프 (4문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 5178 | [S/W 문제해결 기본] 8일차 - 노드의 합 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTa2VIq4mYDFAVT) |
+| 5176 | [S/W 문제해결 기본] 8일차 - 이진탐색 | D2 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTa0jjq4ggDFAVT) |
+| 1232 | [S/W 문제해결 기본] 9일차 - 사칙연산 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141J8KAIcCFAYD) |
+| 1231 | [S/W 문제해결 기본] 9일차 - 중위순회 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV140YnqAIECFAYD) |
+
+> 배열로 트리를 표현하는 연습 세트입니다. `사칙연산` 은 후위 순회로 계산하는 문제라 6일차 `계산기1` 과 짝으로 보면 좋습니다.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawDDHBITH&leftPage=1)</sub>
+
+#### DFS (6문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 4008 | [모의 SW 역량테스트] 숫자 만들기 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeRZV6kBUDFAVH) |
+| 2819 | 격자판의 숫자 이어 붙이기 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7I5fgqEogDFAXB) |
+| 2115 | [모의 SW 역량테스트] 벌꿀채취 ⭐ | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V4A46AdIDFAWu) |
+| 1865 | 동철이의 일 분배 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5LuHfqDz8DFAXc) |
+| 1486 | 장훈이의 높은 선반 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV2b7Yf6ABcBBASw) |
+| 1244 | [S/W 문제해결 응용] 2일차 - 최대 상금 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15Khn6AN0CFAYD) |
+
+> 모의 역량테스트 문제가 3개라 이번 주 체감 난이도의 대부분이 여기에 있습니다. 시간을 넉넉히 잡으세요.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawDHHBITH&leftPage=1)</sub>
+
+#### BFS (5문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 1953 | [모의 SW 역량테스트] 탈주범 검거 | 모의 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PpLlKAQ4DFAUq) |
+| 1249 | [S/W 문제해결 응용] 4일차 - 보급로 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15QRX6APsCFAYD) |
+| 1238 | [S/W 문제해결 기본] 10일차 - Contact | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV15B1cKAKwCFAYD) |
+| 1227 | [S/W 문제해결 기본] 7일차 - 미로2 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14wL9KAGkCFAYD) |
+| 1226 | [S/W 문제해결 기본] 7일차 - 미로1 | D4 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14vXUqAGMCFAYD) |
+
+> `미로1` → `미로2` → `보급로` 순으로 풀면 "단순 도달 판정 → 최단거리 → 가중치" 로 자연스럽게 올라갑니다. `보급로` 는 BFS로는 안 되고 다익스트라가 필요합니다.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawDLHBITH&leftPage=1)</sub>
+
+#### heap과 BackTracking (5문제)
+
+| 번호 | 제목 | 난이도 | 링크 |
+| ---- | ---- | :----: | ---- |
+| 9280 | 진용이네 주차타워 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AW9j74FacD0DFAUY) |
+| 5215 | 햄버거 다이어트 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT) |
+| 5189 | [S/W 문제해결 구현] 2일차 - 전자카트 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWTtmmdKeD8DFAVT) |
+| 2930 | 힙 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV-Tj7ya3jYDFAXr) |
+| 2817 | 부분 수열의 합 | D3 | [바로가기](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7IzvG6EksDFAXB) |
+
+> `부분 수열의 합` · `햄버거 다이어트` 는 백트래킹, `힙` · `전자카트` 는 자료구조 문제입니다. `진용이네 주차타워` 는 그리디에 가깝습니다.
+
+<sub>[문제함 바로가기 · 제출현황](https://swexpertacademy.com/main/talk/solvingClub/problemBoxDetail.do?solveclubId=AZ9kDS86wCTHBITH&probBoxId=AZ9kECgawDPHBITH&leftPage=1)</sub>
+
+</details>
+
+<details>
+<summary><b>🗄️ SQL — 이번 주는 쉽니다</b></summary>
+
+6주차는 SQL을 넣지 않습니다. SWEA 40문제와 SQL 13문제를 같은 주에 얹으면 둘 다 건성으로 하게 됩니다.
+
+**SQL 2주차(집계 함수, 13문제)는 7주차로 밀립니다.** 위 [SQL 트랙](#sql-트랙) 섹션의 매핑 표를 한 주씩 조정했습니다.
+주제 순서는 그대로입니다.
+
+여유 있는 사람은 `SUM` / `AVG` / `COUNT` / `MAX` / `MIN` 이 `NULL` 을 어떻게 다루는지만 미리 봐두면
+7주차가 훨씬 수월합니다. (`COUNT(*)` 와 `COUNT(컬럼)` 이 다른 값을 돌려주는 이유)
+
+</details>
+
+</details>
+
 ---
 
 ## 제출 방법 요약
@@ -380,9 +534,9 @@ SQL은 문제당 5~15분이라 "못 푼 사람 설명 듣기"에 쓸 시간이 �
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-05
+git switch -c {깃허브 닉네임}/week-06
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-05
+git push -u origin {깃허브 닉네임}/week-06
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
