@@ -12,10 +12,14 @@ def solution(arr):
     # 결과 저장 배열
     result = [0] * N
 
+    # 득점할 때마다 점수 차를 구해서 최댓값 갱신
+    answer = 0
+
     for score in arr:
         result[score[0] - 1] += score[1]
+        answer = max(answer, max(result) - min(result))
 
-    return max(result) - min(result)
+    return answer
 
 if __name__ == "__main__":
     print(solution([
