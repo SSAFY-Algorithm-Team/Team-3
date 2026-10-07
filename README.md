@@ -70,7 +70,7 @@ SQL은 프로그래머스 SQL 고득점 Kit으로 병행합니다.
 
 ## SQL 트랙
 
-5주차부터 SQL을 본격적으로 시작합니다. (**6·7주차는 알고리즘에 집중하기 위해, 8·9주차는 기출 세트로 쉽니다** — 아래 표의 매핑을 네 주씩 밀었습니다.)
+5주차부터 SQL을 본격적으로 시작합니다. (**6·7주차는 알고리즘에 집중하기 위해, 8·9주차는 기출 세트로 쉽니다.** 10주차는 로드맵 대신 파트별 Lv3~4 문제를 맛봅니다 — 아래 표의 매핑을 다섯 주씩 밀었습니다.)
 **프로그래머스 SQL 고득점 Kit 106문제를 8주에 완주**하는 것이 목표이고,
 알고리즘 문제와 병행하므로 매주 알고리즘 세트 + SQL 한 묶음씩 가져갑니다.
 
@@ -85,14 +85,15 @@ SQL은 프로그래머스 SQL 고득점 Kit으로 병행합니다.
 |    —     |    6주차    | 쉬는 주 — 알고리즘 집중                         |    —    | —        |
 |    —     |    7주차    | 쉬는 주 — 6주차 이월분 + SWEA 커리큘럼 완주     |    —    | —        |
 |    —     |    8주차    | 쉬는 주 — 기출 세트 (SQL 1문제 포함)            |    —    | —        |
-|    —     |  **9주차**  | **쉬는 주 — 코테 복기 + 기출 이월 (SQL 2문제)** |    —    | —        |
-|    2     |   10주차    | 집계 함수                                       |   13    | Lv1~3    |
-|    3     |   11주차    | NULL 처리 + GROUP BY 입문                       |   14    | Lv1~3    |
-|    4     |   12주차    | GROUP BY 심화 + CASE                            |   12    | Lv2~4    |
-|    5     |   13주차    | 문자열 · 날짜                                   |   14    | Lv1~3    |
-|    6     |   14주차    | JOIN 기본                                       |   11    | Lv2~4    |
-|    7     |   15주차    | 서브쿼리 + JOIN 심화                            |   12    | Lv2~5    |
-|    8     |   16주차    | 종합 · 고난도                                   |   12    | Lv2~5    |
+|    —     |    9주차    | 쉬는 주 — 코테 복기 + 기출 이월 (SQL 2문제)     |    —    | —        |
+|    —     | **10주차**  | **파트별 Lv3~4 맛보기 — 6파트 × 2문제**         |   12    | Lv2~4    |
+|    2     |   11주차    | 집계 함수                                       |   13    | Lv1~3    |
+|    3     |   12주차    | NULL 처리 + GROUP BY 입문                       |   14    | Lv1~3    |
+|    4     |   13주차    | GROUP BY 심화 + CASE                            |   12    | Lv2~4    |
+|    5     |   14주차    | 문자열 · 날짜                                   |   14    | Lv1~3    |
+|    6     |   15주차    | JOIN 기본                                       |   11    | Lv2~4    |
+|    7     |   16주차    | 서브쿼리 + JOIN 심화                            |   12    | Lv2~5    |
+|    8     |   17주차    | 종합 · 고난도                                   |   12    | Lv2~5    |
 
 > 문제 수는 주차마다 다르지만 소요 시간은 비슷합니다.
 > SQL 1주차는 18문제여도 전부 Lv1이라 1시간 남짓이고, 8주차는 12문제인데 Lv4 이상이 8개입니다.
@@ -1169,14 +1170,85 @@ result = 2
 
 ---
 
+<details>
+<summary><h2>10주차 — DP + SQL 파트별 심화 (5 + 12문제)</h2></summary>
+
+**출처:** 프로그래머스 코딩테스트 고득점 Kit → [동적계획법(DP)](https://school.programmers.co.kr/learn/courses/30/parts/12263) / [프로그래머스 SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit) → 파트별 2문제
+
+두 달 만에 유형별 세트로 돌아옵니다.
+
+- **DP 세트는 전부** 풉니다. 5문제 모두 Lv3 이상이니 "점화식을 세우기 전에 상태를 어떻게 정의하는가"에 시간을 쓰세요
+- **SQL은 로드맵 순서 대신 파트별로 어려운 문제를 맛봅니다.** SQL Kit 6개 파트에서 Lv3~4를 2문제씩 골랐습니다. Lv3 이상이 1문제뿐인 파트(SUM·MAX·MIN, IS NULL)는 Lv2로 채웠습니다
+
+> **파일명**은 평소와 같이 `pgs_lv{레벨}_{문제명}.py`, SQL은 `sql_lv{레벨}_{문제명}.sql` 입니다. 예: `pgs_lv3_N으로표현.py`, `sql_lv4_입양시각구하기2.sql`
+> 커밋 메시지는 `solve: [SQL Lv4] 입양 시각 구하기(2)` 형식으로 써주세요.
+
+### 코어 문제 ⭐
+
+전원 필수. 세션에서 다 같이 코드를 비교합니다.
+
+| 제목           | 난이도 | 링크                                                                        |
+| -------------- | ------ | --------------------------------------------------------------------------- |
+| **N으로 표현** | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42895) |
+
+> "N을 k번 써서 만들 수 있는 수의 집합"을 상태로 잡는 순간 풀립니다.
+> 집합 DP로 풀었는지, BFS처럼 풀었는지에서 갈립니다.
+
+<details>
+<summary><b>🧩 알고리즘 — 동적계획법(DP) (5문제)</b></summary>
+
+| 제목          | 난이도 | 링크                                                                        |
+| ------------- | ------ | --------------------------------------------------------------------------- |
+| N으로 표현 ⭐ | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42895) |
+| 정수 삼각형   | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/43105) |
+| 등굣길        | Lv3    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42898) |
+| 사칙연산      | Lv4    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/1843)  |
+| 도둑질        | Lv4    | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/42897) |
+
+> `도둑질`은 집이 원형으로 놓여 있습니다. 첫 집과 마지막 집을 둘 다 털 수 없다는 조건을
+> DP 하나로 처리할지, 두 번 돌릴지가 갈리는 지점입니다.
+
+</details>
+
+<details>
+<summary><b>🗄️ SQL — 파트별 Lv3~4 (12문제)</b></summary>
+
+파트마다 그 파트의 핵심 문법이 가장 잘 드러나는 문제로 골랐습니다.
+
+| 파트          | 제목                                          | 난이도 | 포인트                           | 링크                                                                         |
+| ------------- | --------------------------------------------- | :----: | -------------------------------- | ---------------------------------------------------------------------------- |
+| SELECT        | 오프라인/온라인 판매 데이터 통합하기          |  Lv4   | `UNION ALL` + 빈 컬럼 채우기     | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/131537) |
+| SELECT        | 대장균의 크기에 따라 분류하기 2               |  Lv3   | 윈도 함수로 백분위 나누기        | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/301649) |
+| SUM, MAX, MIN | 물고기 종류 별 대어 찾기                      |  Lv3   | 그룹별 최댓값을 가진 행 찾기     | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/293261) |
+| SUM, MAX, MIN | 연도별 대장균 크기의 편차 구하기              |  Lv2   | 그룹 집계값을 행마다 붙이기      | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/299310) |
+| GROUP BY      | 입양 시각 구하기(2)                           |  Lv4   | 0건인 그룹까지 출력하기          | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/59413)  |
+| GROUP BY      | 년, 월, 성별 별 상품 구매 회원 수 구하기      |  Lv4   | 여러 컬럼 그룹 + `COUNT(DISTINCT)` | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/131532) |
+| IS NULL       | 업그레이드 할 수 없는 아이템 구하기           |  Lv3   | "자식이 없는" 행 찾기            | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/273712) |
+| IS NULL       | ROOT 아이템 구하기                            |  Lv2   | "부모가 없는" 행 찾기            | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/273710) |
+| JOIN          | 특정 기간동안 대여 가능한 자동차들의 대여비용 구하기 |  Lv4   | 기간 겹침 판정 + 할인 조인       | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/157339) |
+| JOIN          | FrontEnd 개발자 찾기                          |  Lv4   | `=` 가 아닌 조건으로 조인 (비트) | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/276035) |
+| String, Date  | 조건에 맞는 사용자 정보 조회하기              |  Lv3   | 문자열 자르고 이어 붙이기        | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/164670) |
+| String, Date  | 조건별로 분류하여 주문상태 출력하기           |  Lv3   | 날짜 비교 + `CASE`               | [바로가기](https://school.programmers.co.kr/learn/courses/30/lessons/131113) |
+
+> IS NULL 두 문제는 같은 `ITEM_TREE` 테이블을 씁니다. `ROOT 아이템`을 먼저 풀고
+> `업그레이드 할 수 없는 아이템`으로 넘어가면 "부모 쪽 NULL"과 "자식 쪽 NULL"을 나란히 비교할 수 있습니다.
+
+> 이번 주에 푼 12문제는 이후 로드맵 주차에서 빠집니다.
+
+</details>
+
+</details>
+
+---
+
 ## 제출 방법 요약
 
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-09
+git switch -c {깃허브 닉네임}/week-10
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-09
+git push -u origin {깃허브 닉네임}/week-10
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
