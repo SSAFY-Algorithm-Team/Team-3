@@ -1,5 +1,5 @@
 # 달러거래손익
-# 소요시간 : 
+# 소요시간 : 모르겠어요 GPT씀
 
 WITH ranked AS (
     SELECT
