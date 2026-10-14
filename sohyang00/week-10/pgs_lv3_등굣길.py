@@ -7,11 +7,11 @@ def solution(m, n, puddles):
 
     for pc, pr in puddles:
         board[pr-1][pc-1] = 0
-        if pc == 1:
-            for i in range(pr-1,n):
+        if pc == 1: # 웅덩이가 0열에 있다면
+            for i in range(pr-1,n): #웅덩이 아래로 전부 0, 못 감
                 board[i][0] = 0
-        elif pr == 1: 
-            for i in range(pc-1,m):
+        elif pr == 1: # 웅덩이가 0행에 있다면
+            for i in range(pc-1,m): # 웅덩이 옆으로 전부 0, 못 감
                 board[0][i] = 0
     for row in range(n):
         for col in range(m):
