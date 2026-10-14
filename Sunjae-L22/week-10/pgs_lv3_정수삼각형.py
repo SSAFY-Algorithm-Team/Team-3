@@ -1,6 +1,6 @@
 # 프로그래머스 Lv3. 정수 삼각형
 # https://github.com/SSAFY-Algorithm-Team/Team-3
-# 소요시간: 분 / 시도: n
+# 소요시간: 10분 / 시도: 2
 
 def solution(triangle):
     # r번째 줄의 c번쨰 열에 왔을 때 가장 큰 거 저장하면 될듯?
