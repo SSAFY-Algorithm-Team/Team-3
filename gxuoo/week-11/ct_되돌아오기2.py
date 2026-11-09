@@ -19,9 +19,8 @@ for i, c in enumerate(commands):
     else:  # F
         x += dxs[idx]
         y += dys[idx]
-
-    if x == 0 and y == 0:
-        ans = i + 1   # L, R도 1초씩 걸리므로 순번 = 시간
-        break
+        if x == 0 and y == 0:
+            ans = i + 1   # L, R도 1초씩 걸리므로 순번 = 시간
+            break
 
 print(ans)
