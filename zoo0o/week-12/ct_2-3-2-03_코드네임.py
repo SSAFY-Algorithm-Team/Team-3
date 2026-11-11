@@ -1,4 +1,4 @@
-# 코드트리 2-3-03. 코드네임
+# 코드트리 2-3-2-03. 코드네임
 # https://www.codetree.ai/ko/trails/complete/curated-cards/intro-code-name/description
 
 # [lambda]
