@@ -1,4 +1,4 @@
-# 코드트리 3-2-02. Next Level
+# 코드트리 2-3-02. Next Level
 # https://www.codetree.ai/ko/trails/complete/curated-cards/intro-next-level/description
 
 # [튜플과 재대입]
