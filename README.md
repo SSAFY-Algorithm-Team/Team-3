@@ -51,17 +51,18 @@
 ```bash
 git switch main
 git pull
-git switch -c {깃허브 닉네임}/week-11
+git switch -c {깃허브 닉네임}/week-12
 # 문제 풀고 커밋
-git push -u origin {깃허브 닉네임}/week-11
+git push -u origin {깃허브 닉네임}/week-12
 # GitHub에서 "Compare & pull request" 클릭
 ```
 
-- **폴더**: 본인 폴더의 `week-{주차}` 에 넣습니다. 예: `gxuoo/week-11/` — `week-13` 부터는 직접 만들면 됩니다
+- **폴더**: 본인 폴더의 `week-{주차}` 에 넣습니다. 예: `gxuoo/week-12/` — `week-13` 부터는 직접 만들면 됩니다
 - **파일명**: [가이드의 파일명 규칙](GITHUB_GUIDE.md#파일명-규칙)을 그대로 씁니다.
   새 출처는 같은 꼴로 `{출처}_{번호}_{문제명}.py` — 예: 백준 `boj_1260_DFS와BFS.py`
-- **커밋 메시지**: `solve: [BOJ 1260] DFS와 BFS` 형식
-- **PR 제목**: `[11주차] {이름} 문제 풀이 제출합니다.`
+  코드트리는 번호 대신 트레일을 씁니다 — 예: `ct_trail2_숫자카운트.py` (`[테스트]` · `[챌린지]` 머리말은 뺍니다)
+- **커밋 메시지**: `solve: [BOJ 1260] DFS와 BFS` · `solve: [CT Trail2] 숫자 카운트` 형식
+- **PR 제목**: `[12주차] {이름} 문제 풀이 제출합니다.`
 
 자세한 설명과 오류 해결은 **[깃허브 사용 가이드](GITHUB_GUIDE.md)** 를 참고하세요.
 
